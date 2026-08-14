@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Dholdholi ✨</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Trebuchet MS", sans-serif;
+    background:#100d2b;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* =========================
+   MAGIC BACKGROUND
+========================= */
+
+.sky{
+    position:fixed;
+    inset:0;
+    background:
+        radial-gradient(circle at 20% 20%,#493d91 0%,transparent 25%),
+        radial-gradient(circle at 80% 30%,#702b67 0%,transparent 25%),
+        radial-gradient(circle at 50% 80%,#233d72 0%,transparent 30%),
+        #100d2b;
+    z-index:-5;
+}
+
+.stars{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:-3;
+}
+
+.star{
+    position:absolute;
+    color:#fff7b2;
+    animation:twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle{
+    from{
+        opacity:.2;
+        transform:scale(.7);
+    }
+    to{
+        opacity:1;
+        transform:scale(1.3);
+    }
+}
+
+/* =========================
+   OPENING
+========================= */
+
+.intro{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:30px;
+    position:relative;
+}
+
+.intro-content{
+    max-width:800px;
+    animation:appear 2s ease;
+}
+
+.moon{
+    font-size:5rem;
+    animation:moonFloat 4s ease-in-out infinite;
+}
+
+.intro h1{
+    font-family:Georgia,serif;
+    font-size:clamp(3rem,12vw,7rem);
+    margin:20px 0;
+    color:#ffe7a0;
+    text-shadow:
+        0 0 10px #fff1a8,
+        0 0 30px #f7caff;
+}
+
+.intro h2{
+    color:#f5c8ff;
+    font-weight:normal;
+    font-size:clamp(1.2rem,4vw,2rem);
+}
+
+.intro p{
+    margin:25px auto;
+    max-width:600px;
+    line-height:1.8;
+    color:#ddd5ff;
+}
+
+.magic-button{
+    padding:16px 30px;
+    border:1px solid #ffe7a0;
+    border-radius:50px;
+    background:rgba(255,255,255,.1);
+    color:#fff5c4;
+    font-size:1rem;
+    cursor:pointer;
+    backdrop-filter:blur(10px);
+    transition:.4s;
+}
+
+.magic-button:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 30px #ffdb8a;
+    background:rgba(255,255,255,.2);
+}
+
+@keyframes appear{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes moonFloat{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-15px);
+    }
+}
+
+/* =========================
+   FLOATING BUTTERFLIES
+========================= */
+
+.butterfly{
+    position:fixed;
+    font-size:25px;
+    pointer-events:none;
+    z-index:2;
+    animation:fly linear infinite;
+}
+
+@keyframes fly{
+    0%{
+        transform:translate(-10vw,110vh) rotate(0deg);
+    }
+
+    50%{
+        transform:translate(50vw,50vh) rotate(20deg);
+    }
+
+    100%{
+        transform:translate(110vw,-10vh) rotate(-20deg);
+    }
+}
+
+/* =========================
+   MAGICAL SECTION
+========================= */
+
+.section{
+    min-height:100vh;
+    padding:100px 20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.container{
+    width:100%;
+    max-width:1000px;
+}
+
+.title{
+    font-family:Georgia,serif;
+    color:#ffe5a5;
+    font-size:clamp(2.3rem,7vw,4rem);
+    margin-bottom:25px;
+}
+
+.subtitle{
+    color:#d9cfff;
+    max-width:650px;
+    margin:auto;
+    line-height:1.8;
+}
+
+/* =========================
+   MAGIC CARDS
+========================= */
+
+.magic-grid{
+    margin-top:50px;
+    display:grid;
+    grid-template-columns:
+        repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.magic-card{
+    padding:30px 20px;
+    border-radius:25px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.15);
+    backdrop-filter:blur(10px);
+    opacity:0;
+    transform:translateY(50px) scale(.95);
+    transition:1s;
+}
+
+.magic-card.show{
+    opacity:1;
+    transform:translateY(0) scale(1);
+}
+
+.magic-card:hover{
+    transform:translateY(-10px) rotate(1deg);
+    box-shadow:0 15px 40px rgba(255,200,255,.15);
+}
+
+.magic-card .emoji{
+    font-size:3rem;
+    margin-bottom:15px;
+}
+
+.magic-card h3{
+    color:#ffe5a5;
+    margin-bottom:12px;
+}
+
+.magic-card p{
+    color:#d9d1ef;
+    line-height:1.6;
+}
+
+/* =========================
+   POPUP
+========================= */
+
+.popup{
+    position:fixed;
+    top:25px;
+    right:25px;
+    width:320px;
+    padding:22px;
+    border-radius:22px;
+    background:rgba(35,27,75,.95);
+    border:1px solid #ffe6a3;
+    box-shadow:0 10px 40px rgba(0,0,0,.5);
+    z-index:10000;
+
+    transform:translateX(400px);
+    transition:.7s cubic-bezier(.68,-.55,.27,1.55);
+}
+
+.popup.active{
+    transform:translateX(0);
+}
+
+.popup .close{
+    float:right;
+    cursor:pointer;
+    color:#ffe5a5;
+    font-size:20px;
+}
+
+.popup h3{
+    color:#ffe5a5;
+    margin-bottom:10px;
+}
+
+.popup p{
+    color:#e5ddfa;
+    line-height:1.6;
+}
+
+/* =========================
+   BIG SURPRISE MODAL
+========================= */
+
+.modal{
+    position:fixed;
+    inset:0;
+    background:rgba(5,3,20,.8);
+    backdrop-filter:blur(8px);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:20000;
+
+    opacity:0;
+    visibility:hidden;
+    transition:.5s;
+}
+
+.modal.active{
+    opacity:1;
+    visibility:visible;
+}
+
+.modal-box{
+    width:90%;
+    max-width:500px;
+    background:linear-gradient(145deg,#35265e,#1d1740);
+    border:1px solid #ffe6a3;
+    border-radius:30px;
+    padding:40px 25px;
+    text-align:center;
+
+    transform:scale(.5) rotate(-5deg);
+    transition:.6s;
+}
+
+.modal.active .modal-box{
+    transform:scale(1) rotate(0);
+}
+
+.modal-box .big{
+    font-size:5rem;
+}
+
+.modal-box h2{
+    color:#ffe5a5;
+    font-family:Georgia,serif;
+    margin:15px 0;
+}
+
+.modal-box p{
+    color:#ddd5ff;
+    line-height:1.8;
+    margin-bottom:25px;
+}
+
+/* =========================
+   LETTER
+========================= */
+
+.letter{
+    max-width:650px;
+    margin:50px auto;
+    background:#fff5dc;
+    color:#432b3c;
+    padding:35px;
+    border-radius:5px;
+    box-shadow:0 15px 40px rgba(0,0,0,.4);
+
+    transform:rotate(-1deg);
+    opacity:0;
+    transition:1s;
+}
+
+.letter.show{
+    opacity:1;
+}
+
+.letter h2{
+    font-family:cursive;
+    margin-bottom:20px;
+}
+
+.letter p{
+    line-height:1.9;
+    font-family:Georgia,serif;
+}
+
+/* =========================
+   CAKE
+========================= */
+
+.cake{
+    margin:40px auto;
+    width:180px;
+    position:relative;
+}
+
+.cake-body{
+    height:100px;
+    background:#ff9fcb;
+    border-radius:15px;
+    box-shadow:
+        inset 0 -15px #ff70ae,
+        0 15px 30px rgba(0,0,0,.3);
+}
+
+.candle{
+    width:15px;
+    height:55px;
+    background:#ffe9a3;
+    position:absolute;
+    top:-55px;
+    left:83px;
+}
+
+.flame{
+    width:20px;
+    height:30px;
+    background:#ffd43b;
+    border-radius:50% 50% 50% 0;
+    transform:rotate(-45deg);
+    position:absolute;
+    top:-28px;
+    left:-3px;
+    animation:flicker .5s infinite alternate;
+}
+
+@keyframes flicker{
+    from{
+        transform:rotate(-45deg) scale(.8);
+    }
+    to{
+        transform:rotate(-45deg) scale(1.1);
+    }
+}
+
+/* =========================
+   SPARKLES
+========================= */
+
+.sparkle{
+    position:fixed;
+    pointer-events:none;
+    color:#fff4a8;
+    z-index:30000;
+    animation:sparkleAnim 1s forwards;
+}
+
+@keyframes sparkleAnim{
+    from{
+        opacity:1;
+        transform:scale(1) translateY(0);
+    }
+    to{
+        opacity:0;
+        transform:scale(2) translateY(-30px);
+    }
+}
+
+/* =========================
+   CONFETTI
+========================= */
+
+.confetti{
+    position:fixed;
+    top:-20px;
+    width:9px;
+    height:15px;
+    z-index:25000;
+    pointer-events:none;
+    animation:fall linear forwards;
+}
+
+@keyframes fall{
+    to{
+        transform:translateY(110vh) rotate(720deg);
+    }
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+    padding:70px 20px;
+    text-align:center;
+    color:#aaa0ca;
+}
+
+.footer strong{
+    color:#ffe5a5;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:600px){
+
+    .popup{
+        width:calc(100% - 30px);
+        right:15px;
+        top:15px;
+    }
+
+    .intro{
+        padding:25px 15px;
+    }
+
+    .moon{
+        font-size:4rem;
+    }
+
+    .section{
+        padding:80px 15px;
+    }
+
+    .letter{
+        padding:25px 20px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="sky"></div>
+
+<div class="stars" id="stars"></div>
+
+
+<!-- =========================
+     INTRO
+========================= -->
+
+<section class="intro">
+
+<div class="intro-content">
+
+<div class="moon">🌙</div>
+
+<h1>Happy Birthday<br>Dholdholi ✨</h1>
+
+<h2>🌸 A tiny magical world made just for you 🌸</h2>
+
+<p>
+Once upon a time, on a very special day,
+a wonderfully chaotic human named
+<strong>Dholdholi</strong> entered the world...
+and honestly, the universe has never recovered. ✨
+</p>
+
+<button class="magic-button" onclick="openMagic()">
+🪄 Enter the Birthday Kingdom
+</button>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     MAGIC CARDS
+========================= -->
+
+<section class="section">
+
+<div class="container">
+
+<h2 class="title">✨ The Birthday Prophecy ✨</h2>
+
+<p class="subtitle">
+According to extremely trustworthy magical sources,
+Dholdholi's next year is predicted to contain:
+</p>
+
+
+<div class="magic-grid">
+
+<div class="magic-card">
+<div class="emoji">🌷</div>
+<h3>Endless Happiness</h3>
+<p>
+So much happiness that even the flowers
+will become jealous.
+</p>
+</div>
+
+<div class="magic-card">
+<div class="emoji">🦋</div>
+<h3>Beautiful Chaos</h3>
+<p>
+Because a completely peaceful life
+would simply be unacceptable.
+</p>
+</div>
+
+<div class="magic-card">
+<div class="emoji">✨</div>
+<h3>Main Character Energy</h3>
+<p>
+The stars have officially decided
+that you're the protagonist.
+</p>
+</div>
+
+<div class="magic-card">
+<div class="emoji">🍰</div>
+<h3>Suspicious Amounts of Cake</h3>
+<p>
+Scientists cannot explain it.
+The cake simply keeps appearing.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     SECRET LETTER
+========================= -->
+
+<section class="section">
+
+<div class="container">
+
+<h2 class="title">💌 A Letter From The Fairies</h2>
+
+<button class="magic-button" onclick="openLetter()">
+🧚 Open the tiny letter
+</button>
+
+<div class="letter" id="letter">
+
+<h2>Dear Dholdholi,</h2>
+
+<p>
+If you are reading this, congratulations.
+You have officially unlocked another chapter
+of your wonderfully weird little adventure.
+</p>
+
+<br>
+
+<p>
+May you always find reasons to laugh,
+people who make ordinary days magical,
+places that feel like home,
+and moments that make you stop and think,
+"Wow... life is actually pretty beautiful."
+</p>
+
+<br>
+
+<p>
+And whenever life becomes a little too serious,
+remember that somewhere in the universe
+there is probably a cat falling off a table.
+</p>
+
+<br>
+
+<p>
+Keep being unapologetically YOU.
+🌷✨🦋
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     CAKE
+========================= -->
+
+<section class="section">
+
+<div class="container">
+
+<h2 class="title">🎂 Make A Wish</h2>
+
+<div class="cake">
+
+<div class="candle">
+<div class="flame"></div>
+</div>
+
+<div class="cake-body"></div>
+
+</div>
+
+<p class="subtitle">
+Close your eyes. Make a wish.
+But don't tell anyone.
+The birthday fairies are listening. 🤫✨
+</p>
+
+<button class="magic-button" onclick="makeWish()">
+🌟 Cast Birthday Spell
+</button>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     FINAL
+========================= -->
+
+<section class="section">
+
+<div class="container">
+
+<div style="font-size:5rem;">
+🌙✨🦋🌸
+</div>
+
+<h2 class="title">
+HAPPY BIRTHDAY DHOLDHOLI
+</h2>
+
+<p class="subtitle">
+May your days be soft,
+your dreams be enormous,
+your laughter be uncontrollable,
+and your life be full of tiny moments
+that feel like magic.
+</p>
+
+<br>
+
+<button class="magic-button" onclick="finalChaos()">
+🎉 UNLEASH THE MAGIC
+</button>
+
+</div>
+
+</section>
+
+
+
+<div class="footer">
+Made with ✨, questionable amounts of magic,
+and absolutely no adult supervision.<br><br>
+<strong>Happy Birthday, Dholdholi 🌸</strong>
+</div>
+
+
+
+<!-- =========================
+     POPUP
+========================= -->
+
+<div class="popup" id="popup">
+
+<span class="close" onclick="closePopup()">×</span>
+
+<h3 id="popupTitle">✨ Magical Notification</h3>
+
+<p id="popupText">
+The birthday fairies have arrived.
+</p>
+
+</div>
+
+
+
+<!-- =========================
+     MODAL
+========================= -->
+
+<div class="modal" id="modal">
+
+<div class="modal-box">
+
+<div class="big" id="modalEmoji">🧚</div>
+
+<h2 id="modalTitle">A Magical Message</h2>
+
+<p id="modalText">
+Something magical happened.
+</p>
+
+<button class="magic-button" onclick="closeModal()">
+✨ Continue the adventure
+</button>
+
+</div>
+
+</div>
+
+
+
+<script>
+
+/* =========================
+   STARS
+========================= */
+
+const stars =
+document.getElementById("stars");
+
+for(let i=0;i<100;i++){
+
+    const star=document.createElement("div");
+
+    star.className="star";
+
+    star.innerHTML=
+        Math.random()>.5 ? "✦" : "·";
+
+    star.style.left=
+        Math.random()*100+"%";
+
+    star.style.top=
+        Math.random()*100+"%";
+
+    star.style.fontSize=
+        (8+Math.random()*15)+"px";
+
+    star.style.animationDelay=
+        Math.random()*3+"s";
+
+    stars.appendChild(star);
+}
+
+
+/* =========================
+   BUTTERFLIES
+========================= */
+
+const butterflyTypes=[
+    "🦋",
+    "🌸",
+    "✨",
+    "🧚"
+];
+
+for(let i=0;i<12;i++){
+
+    const b=document.createElement("div");
+
+    b.className="butterfly";
+
+    b.innerHTML=
+        butterflyTypes[
+            Math.floor(Math.random()*butterflyTypes.length)
+        ];
+
+    b.style.left=
+        Math.random()*100+"vw";
+
+    b.style.animationDuration=
+        (10+Math.random()*12)+"s";
+
+    b.style.animationDelay=
+        Math.random()*10+"s";
+
+    document.body.appendChild(b);
+}
+
+
+/* =========================
+   MAGIC POPUPS
+========================= */
+
+const popupMessages=[
+
+[
+"🧚 Fairy #1",
+"Dholdholi has officially been declared too magical for ordinary birthdays."
+],
+
+[
+"🦋 Butterfly Report",
+"Your birthday has caused an unusual increase in sparkles."
+],
+
+[
+"🌙 Moon Notification",
+"The moon would like you to know that you are doing pretty great."
+],
+
+[
+"🌸 Flower Department",
+"Please continue being wonderful. It helps the flowers bloom."
+],
+
+[
+"✨ Important Research",
+"Scientists have discovered that birthdays are 73% better with cake."
+],
+
+[
+"🐱 Mysterious Cat",
+"pspspspsps... happy birthday."
+],
+
+[
+"🧚 Fairy Council",
+"Your application for another year of adventures has been APPROVED."
+],
+
+[
+"🌟 Cosmic Announcement",
+"Dholdholi is currently the main character. Please act accordingly."
+]
+
+];
+
+let popupIndex=0;
+
+function showPopup(){
+
+    const popup=
+        document.getElementById("popup");
+
+    const title=
+        document.getElementById("popupTitle");
+
+    const text=
+        document.getElementById("popupText");
+
+    const message=
+        popupMessages[
+            popupIndex % popupMessages.length
+        ];
+
+    title.innerText=message[0];
+    text.innerText=message[1];
+
+    popupIndex++;
+
+    popup.classList.add("active");
+
+    setTimeout(()=>{
+        popup.classList.remove("active");
+    },5000);
+}
+
+function closePopup(){
+
+    document
+        .getElementById("popup")
+        .classList.remove("active");
+}
+
+
+/* =========================
+   MODAL
+========================= */
+
+function openMagic(){
+
+    openModal(
+        "🧚",
+        "WELCOME, DHOLDHOLI",
+        "You have officially entered the Birthday Kingdom. Please keep your expectations unreasonable."
+    );
+
+    confetti();
+}
+
+function openModal(emoji,title,text){
+
+    document.getElementById("modalEmoji")
+        .innerText=emoji;
+
+    document.getElementById("modalTitle")
+        .innerText=title;
+
+    document.getElementById("modalText")
+        .innerText=text;
+
+    document.getElementById("modal")
+        .classList.add("active");
+}
+
+function closeModal(){
+
+    document.getElementById("modal")
+        .classList.remove("active");
+}
+
+
+/* =========================
+   LETTER
+========================= */
+
+function openLetter(){
+
+    document.getElementById("letter")
+        .classList.add("show");
+
+    document.getElementById("letter")
+        .scrollIntoView({
+            behavior:"smooth",
+            block:"center"
+        });
+
+    setTimeout(showPopup,1000);
+}
+
+
+/* =========================
+   WISH
+========================= */
+
+function makeWish(){
+
+    confetti();
+
+    openModal(
+        "🌟",
+        "WISH CAST SUCCESSFULLY",
+        "Your wish has been sent to the universe. Unfortunately, the universe refuses to provide a tracking number."
+    );
+}
+
+
+/* =========================
+   FINAL CHAOS
+========================= */
+
+function finalChaos(){
+
+    confetti();
+
+    for(let i=0;i<20;i++){
+
+        createSparkle(
+            Math.random()*window.innerWidth,
+            Math.random()*window.innerHeight
+        );
+    }
+
+    openModal(
+        "🎂",
+        "HAPPY BIRTHDAY DHOLDHOLI!!!",
+        "The fairies, butterflies, moon, stars and one suspicious cat have officially gathered to wish you the happiest birthday ever. ✨"
+    );
+
+}
+
+
+/* =========================
+   CONFETTI
+========================= */
+
+function confetti(){
+
+    const colors=[
+        "#ffd166",
+        "#ff8fab",
+        "#cdb4db",
+        "#90dbf4",
+        "#b9fbc0",
+        "#ffffff"
+    ];
+
+    for(let i=0;i<180;i++){
+
+        const c=
+            document.createElement("div");
+
+        c.className="confetti";
+
+        c.style.left=
+            Math.random()*100+"vw";
+
+        c.style.background=
+            colors[
+                Math.floor(Math.random()*colors.length)
+            ];
+
+        c.style.animationDuration=
+            (2+Math.random()*4)+"s";
+
+        c.style.animationDelay=
+            Math.random()*1+"s";
+
+        document.body.appendChild(c);
+
+        setTimeout(()=>{
+            c.remove();
+        },6000);
+    }
+}
+
+
+/* =========================
+   CURSOR SPARKLES
+========================= */
+
+document.addEventListener("mousemove",(e)=>{
+
+    if(Math.random()>.8){
+
+        createSparkle(
+            e.clientX,
+            e.clientY
+        );
+
+    }
+
+});
+
+function createSparkle(x,y){
+
+    const s=
+        document.createElement("div");
+
+    s.className="sparkle";
+
+    s.innerHTML=
+        ["✦","✧","⋆","✨"]
+        [Math.floor(Math.random()*4)];
+
+    s.style.left=x+"px";
+    s.style.top=y+"px";
+
+    document.body.appendChild(s);
+
+    setTimeout(()=>{
+        s.remove();
+    },1000);
+}
+
+
+/* =========================
+   SCROLL ANIMATIONS
+========================= */
+
+const cards=
+    document.querySelectorAll(".magic-card");
+
+const observer=
+    new IntersectionObserver(
+        entries=>{
+
+            entries.forEach(entry=>{
+
+                if(entry.isIntersecting){
+
+                    entry.target
+                        .classList.add("show");
+
+                }
+
+            });
+
+        },
+        {
+            threshold:.15
+        }
+    );
+
+cards.forEach(card=>{
+    observer.observe(card);
+});
+
+
+/* =========================
+   RANDOM POPUPS
+========================= */
+
+setTimeout(showPopup,7000);
+
+setInterval(()=>{
+
+    if(Math.random()>.35){
+        showPopup();
+    }
+
+},12000);
+
+</script>
+
+</body>
+</html>
